@@ -3,14 +3,13 @@ import Link from 'next/link'
 import React from 'react'
 import { NAV_LINKS } from '../../utils/navLinks'
 import Image from 'next/image'
-import logo from "../../public/logo.svg"
 
 const Navbar = () => {
     return (
         <nav className="flex w-full h-[86px] justify-between shadow-[0px_0px_1.67px_0px_rgba(0,0,0,0.25)] items-center px-14">
             {/* logo */}
             <div>
-                <Image src={logo} alt="abexita logo" width={150} height={39} />
+                <Image src="/logo.svg" alt="abexita logo" width={150} height={39} />
             </div>
 
             {/* pages  */}
