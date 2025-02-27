@@ -1,10 +1,4 @@
-const NAV_LINKS = [
-    {
-      id: 1,
-      page: "Features",
-      href: "/",
-      children: []
-    },
+export const NAV_LINKS = [
     {
       id: 1,
       page: "Features",
@@ -13,28 +7,34 @@ const NAV_LINKS = [
     },
     {
       id: 2,
+      page: "Features",
+      href: "/",
+      children: []
+    },
+    {
+      id: 3,
       page: "Pricing",
       href: "/"
     },
     {
-      id: 3,
+      id: 4,
       page: "Solutions",
       href: "/",
       children: []
     },
     {
-      id: 4,
+      id: 5,
       page: "Resources",
       href: "/",
       children: []
     },
     {
-      id: 5,
+      id: 6,
       page: "Find Professionals",
       href: "/"
     },
     {
-      id: 6,
+      id: 7,
       page: "Help",
       href: "/",
       children: []
