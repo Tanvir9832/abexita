@@ -6,6 +6,7 @@ import {
   CircleCheck,
   CreditCard,
   Layers,
+  Layers2,
   LucideProps,
   MapPin,
   PanelsTopLeft,
@@ -30,5 +31,6 @@ export const ICON = {
   CIRCLE_CHECK: (props: LucideProps) => <CircleCheck {...props} />,
   SETTINGS: (props: LucideProps) => <Settings2 {...props} />,
   MAP: (props: LucideProps) => <MapPin {...props} />,
-  ARROW_RIGHT: (props: LucideProps) => <ArrowRight {...props} />
+  ARROW_RIGHT: (props: LucideProps) => <ArrowRight {...props} />,
+  LAYER_2: (props: LucideProps) => <Layers2 {...props} />
 };
