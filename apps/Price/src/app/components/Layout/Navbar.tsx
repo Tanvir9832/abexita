@@ -1,7 +1,7 @@
-import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
 import React from 'react'
-import { NAV_LINKS } from '../../utils/navLinks'
+import { NAV_LINKS } from "../../../../../Home/src/app/utils"
+import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 
 const Navbar = () => {
@@ -11,13 +11,12 @@ const Navbar = () => {
             <div>
                 <Image src="/logo.svg" alt="abexita logo" width={150} height={39} />
             </div>
-
             {/* pages  */}
             <div>
                 <ul className="flex gap-3 font-medium text-base leading-6">
                     {
                         NAV_LINKS.map((link) => {
-                            if(!link.Belong.includes("HOME"))return;
+                            if (!link.Belong.includes("PRICE")) return;
                             return (
                                 <li className="flex items-center justify-center gap-[6.66px] text-secondary" key={link.id}>
                                     <Link href={link.href}>{link.page}</Link>
@@ -34,14 +33,13 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-
             {/* auth  */}
-            <div className="flex gap-2 items-center justify-center">
-                <button>
-                    <Link href="/">Log In</Link>
-                </button>
-                <button className="bg-primary-2 rounded-[5px] pt-[6.66px] pr-[13.33px] pb-[6.66px] pl-[13.33px] text-white">
+            <div className="flex gap-4 items-center justify-center">
+                <button className="bg-primary rounded-[5px] pt-[6.66px] pr-[13.33px] pb-[6.66px] pl-[13.33px] text-white">
                     <Link href="/">Sign Up</Link>
+                </button>
+                <button>
+                    <Link href="/">Sign In</Link>
                 </button>
             </div>
         </nav>
