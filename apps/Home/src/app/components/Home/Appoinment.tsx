@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { CARDS, ICON, PROFESSIONS, TAGS } from "../../utils";
 import Image from "next/image";
-// import AnimatedCards from "../AnimatedCard";
 
 const Appoinment = () => {
 

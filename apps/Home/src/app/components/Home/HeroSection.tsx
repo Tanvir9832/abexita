@@ -5,12 +5,12 @@ import { ICON } from '../../utils'
 
 const HeroSection = () => {
     const professionals = [
-        "/Category/doc.svg",
-        "/Category/doc.svg",
-        "/Category/doc.svg",
-        "/Category/doc.svg",
-        "/Category/doc.svg",
-        "/Category/doc.svg",
+        "/Category/eoc.svg",
+        "/Category/foc.svg",
+        "/Category/goc.svg",
+        "/Category/hoc.svg",
+        "/Category/ioc.svg",
+        "/Category/joc.svg",
     ];
     return (
         <div className='flex flex-col flex-wrap items-center justify-center'>
@@ -84,70 +84,83 @@ const HeroSection = () => {
                 </div>
             </div>
 
-
-            <div className='flex flex-col items-center justify-center'>
-                <div className='flex flex-col gap-5 items-center justify-center'>
-                    <p className='font-semibold text-base leading-6 tracking-normal text-center text-tertiary-3'>Industries</p>
-                    <h1 className='font-semibold text-4xl leading-9 text-center text-tertiary-4'>
-                        Popular Businesses and Practitioners <br />
-                        who use Ambel
-                    </h1>
-                    <h2 className='font-normal text-xl leading-[30px] text-secondary-4 tracking-normal text-center'>
-                        Our platform supports a diverse range of professionals, with popular industries; including: <br />
-                        healthcare providers, medi spas, salons , fitness coaches, law agencies, beauty specialists, <br />
-                        consultants, and therapists.
-                    </h2>
-                </div>
-                <div className="flex flex-wrap gap-2 w-full justify-between rounded-[29px] border border-primary-5 px-[2px] py-[2px] shadow-[0px_1px_2px_0px_#1018280D] font-semibold text-base leading-5">
-                    {CATEGORIES.map((item, index) => (
-                        <p
-                            key={index}
-                            className={`py-2 px-6 rounded-[45px] transition-all ${index === 0
-                                ? "bg-primary text-white"
-                                : "hover:bg-primary hover:text-white cursor-pointer"
-                                }`}
-                        >
-                            {item}
-                        </p>
-                    ))}
-                </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 p-6">
-                {/* Left Content Section */}
-                <div className="bg-primary p-6 text-white rounded-xl max-w-lg flex flex-col md:flex-row items-center gap-6">
-                    <div className="flex flex-col gap-4 items-start">
-                        <button className="bg-white text-tertiary-4 font-medium text-sm leading-5 py-1 px-3 rounded-2xl">
-                            Doctor
-                        </button>
-                        <h2 className="font-semibold text-2xl leading-9 tracking-tight">
-                            Business solution for <br /> healthcare providers
+            <div className='flex flex-col items-center justify-center gap-12'>
+                <div className='flex flex-col items-center justify-center gap-12 pt-20'>
+                    <div className='flex flex-col gap-5 items-center justify-center'>
+                        <p className='font-semibold text-base leading-6 tracking-normal text-center text-tertiary-3'>Industries</p>
+                        <h1 className='font-semibold text-4xl leading-9 text-center text-tertiary-4'>
+                            Popular Businesses and Practitioners <br />
+                            who use Ambel
+                        </h1>
+                        <h2 className='font-normal text-xl leading-[30px] text-secondary-4 tracking-normal text-center'>
+                            Our platform supports a diverse range of professionals, with popular industries; including: <br />
+                            healthcare providers, medi spas, salons , fitness coaches, law agencies, beauty specialists, <br />
+                            consultants, and therapists.
                         </h2>
-                        <p className="font-normal text-sm leading-5">
-                            Our software allows Doctors and Medical Professionals to book
-                            appointments, manage their patients, provide online prescriptions,
-                            overview of their med charts, and automatically send reminders for
-                            treatments.
-                        </p>
-                        <div className="flex items-center gap-2 font-normal text-sm leading-5">
-                            <button className="underline">Learn more</button>
-                            <ICON.SQUARE_ARROW_OUT_RIGHT className="w-4 h-4" />
-                        </div>
                     </div>
-                    <div className="hidden md:block">
-                        <Image src="/Category/doc.svg" alt="doc" width={200} height={150} className="w-auto h-auto" />
+                    <div className="flex flex-wrap gap-2 w-full justify-between rounded-[29px] border border-primary-5 px-[2px] py-[2px] shadow-[0px_1px_2px_0px_#1018280D] font-semibold text-base leading-5">
+                        {CATEGORIES.map((item, index) => (
+                            <p
+                                key={index}
+                                className={`py-2 px-6 rounded-[45px] transition-all ${index === 0
+                                    ? "bg-primary text-white"
+                                    : "hover:bg-primary hover:text-white cursor-pointer"
+                                    }`}
+                            >
+                                {item}
+                            </p>
+                        ))}
                     </div>
                 </div>
 
-                {/* Right Image Section */}
-                <div className="flex gap-3">
-                    {professionals.map((src, index) => (
-                        <div key={index} className="w-[80px] md:w-[100px] rounded-[20px] overflow-hidden">
-                            <Image src={src} alt="Professional" width={100} height={150} className="w-full h-full object-cover" />
+                <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 pb-14">
+                    {/* Left Content Section */}
+                    <div className="bg-primary p-6 text-white rounded-xl max-w-lg flex justify-between gap-6 relative">
+                        <div className='flex flex-col gap-4 items-start'>
+                            <button className="bg-white text-tertiary-4 font-medium text-sm py-1 px-3 rounded-2xl">
+                                Doctor
+                            </button>
+                            <h2 className="font-semibold text-2xl leading-9">
+                                Business solution for <br /> healthcare providers
+                            </h2>
+                            <p className="text-sm leading-5">
+                                Our software allows Doctors and Medical Professionals to book
+                                appointments, manage their patients, provide online prescriptions,
+                                overview of their med charts, and automatically send reminders for
+                                treatments.
+                            </p>
+                            <div className="flex items-center gap-2 text-sm">
+                                <button className="underline">Learn more</button>
+                                <ICON.SQUARE_ARROW_OUT_RIGHT className="w-4 h-4" />
+                            </div>
                         </div>
-                    ))}
+                        <div>
+                            <div className="">
+                                <Image src="/Category/doc.svg" alt="Doctor Illustration" width={650} height={750} className="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Image Section */}
+                    <div className="flex gap-3">
+                        {professionals.map((src, index) => (
+                            <div
+                                key={index}
+                                className="w-[70px] md:w-[100px] rounded-2xl overflow-hidden shadow-md"
+                            >
+                                <Image
+                                    src={src}
+                                    alt="Professional"
+                                    width={100}
+                                    height={150}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
